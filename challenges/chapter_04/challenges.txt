@@ -1,0 +1,16 @@
+1)
+Programming languages are not regular languages because they require context. A regular language must be context-free (as well as other properties).
+
+2)
+C - Accidental token paste?
+Ruby something about gsub and something about multi line comments.
+CoffeeScript CBA
+
+3) 
+    Documentation from comments.
+    Code analysis hints or warning add/remove.
+
+
+4) 
+    Allowing for nested /* */ style comments would be more complicated because the comment itself would have to be parsed, rather than ignored.
+    Would also need to keep a track of the number of times that /* was entered and then */ was exited.

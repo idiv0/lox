@@ -90,6 +90,10 @@ class Scanner {
                         advance();
                     }
                 }
+                else if (match('*'))
+                {
+                    multilineComment();
+                }
                 else
                 {
                     addToken(TokenType.SLASH);
@@ -178,6 +182,19 @@ class Scanner {
         String value = source.substring(this.start + 1, this.current - 1);
         // If we wanted escape characters, we would resolve them here.
         addToken(TokenType.STRING, value);
+    }
+
+    private void multilineComment()
+    {
+        /* This might support nested multiline comments. */
+        while (peek() != '*' && peekNext() != '/' && !isAtEnd())
+        {
+            advance();
+            if (!isAtEnd() && peek() == '/' && peekNext() == '*')
+            {
+                multilineComment();
+            }
+        }
     }
 
     private boolean match(char expected)
