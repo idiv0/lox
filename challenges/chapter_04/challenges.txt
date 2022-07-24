@@ -1,5 +1,7 @@
 1)
 Programming languages are not regular languages because they require context. A regular language must be context-free (as well as other properties).
+From chapter 5: Non-regular languages allow for grammars to be defined with recursive rules that are expressed a number of times. 
+Regular languages allow for repetition, but cannot keep track of how many times the repetition has occured. Context-free grammars can.
 
 2)
 C - Accidental token paste?

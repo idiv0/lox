@@ -1,0 +1,17 @@
+1)
+
+( expr )
+( expr, expr, expr )
+.hello
+
+
+expr -> expr(expr)
+expr -> expr(expr, expr)
+expr -> expr(expr, expr, expr) ... etc.
+expr -> expr.IDENTIFIER
+expr -> expr(expr).IDENTIFIER
+expr -> .IDENTIFIER
+expr -> NUMBER
+expr -> IDENTIFIER
+
+Looks like function calling syntax.
